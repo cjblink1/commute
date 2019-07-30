@@ -7,8 +7,10 @@ pipeline {
                     steps {
                         dir('backend') {
                             script {
-                                def backendImage = docker.build("hub.cjblink1.pro/commute-backend:${GIT_COMMIT}")
-                                backendImage.push()
+                                docker.withRegistry("https://hub.cjblink1.pro", "registryCredentials") {
+                                    def backendImage = docker.build("commute-backend:${GIT_COMMIT}")
+                                    backendImage.push()
+                                }
                             }
                         }
                     }
