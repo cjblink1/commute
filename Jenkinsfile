@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build & Test') {
             parallel {
-                stage('Backend Build & Test') {
+                stage('Backend') {
                     steps {
                         dir('backend') {
                             script {
@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             when { buildingTag() }
             parallel {
-                stage('Backend Build and Push') {
+                stage('Backend') {
                     steps {
                         dir('backend') {
                             script {
