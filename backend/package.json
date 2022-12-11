@@ -11,7 +11,7 @@
   "dependencies": {
     "@google/maps": "^0.5.5",
     "dotenv": "^8.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
@@ -22,7 +22,7 @@
     "@types/node": "^12.6.8",
     "chai": "^4.2.0",
     "dotenv": "^8.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "gulp": "4",
     "gulp-clean": "^0.4.0",
     "gulp-mocha": "^6.0.0",
